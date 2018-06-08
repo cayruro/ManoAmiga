@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -36,16 +37,20 @@
             this.txtContra = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnRegist = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Green;
-            this.label1.Location = new System.Drawing.Point(71, 37);
+            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(45, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(449, 31);
+            this.label1.Size = new System.Drawing.Size(506, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "¡¡BIENVENIDO A MANO AMIGA!!";
             // 
@@ -53,7 +58,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(83, 167);
+            this.label2.Location = new System.Drawing.Point(48, 167);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 18);
             this.label2.TabIndex = 1;
@@ -63,7 +68,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(83, 218);
+            this.label3.Location = new System.Drawing.Point(42, 216);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 18);
             this.label3.TabIndex = 2;
@@ -71,17 +76,18 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(368, 266);
+            this.btnEntrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEntrar.Location = new System.Drawing.Point(206, 265);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(152, 42);
             this.btnEntrar.TabIndex = 3;
             this.btnEntrar.Text = "Entrar";
-            this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(226, 165);
+            this.txtUser.Location = new System.Drawing.Point(128, 168);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(196, 20);
             this.txtUser.TabIndex = 4;
@@ -89,7 +95,7 @@
             // 
             // txtContra
             // 
-            this.txtContra.Location = new System.Drawing.Point(226, 216);
+            this.txtContra.Location = new System.Drawing.Point(133, 217);
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(196, 20);
             this.txtContra.TabIndex = 5;
@@ -106,7 +112,7 @@
             // 
             // btnRegist
             // 
-            this.btnRegist.Location = new System.Drawing.Point(64, 266);
+            this.btnRegist.Location = new System.Drawing.Point(30, 265);
             this.btnRegist.Name = "btnRegist";
             this.btnRegist.Size = new System.Drawing.Size(155, 42);
             this.btnRegist.TabIndex = 7;
@@ -114,11 +120,22 @@
             this.btnRegist.UseVisualStyleBackColor = true;
             this.btnRegist.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(364, 100);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(369, 357);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 338);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(779, 504);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnRegist);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtContra);
@@ -130,6 +147,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,6 +163,7 @@
         private System.Windows.Forms.TextBox txtContra;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnRegist;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

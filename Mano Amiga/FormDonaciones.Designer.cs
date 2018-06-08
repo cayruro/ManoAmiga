@@ -40,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAdquirir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -94,7 +95,7 @@
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(105, 222);
+            this.txtDesc.Location = new System.Drawing.Point(104, 222);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(253, 165);
             this.txtDesc.TabIndex = 4;
@@ -112,7 +113,7 @@
             // 
             // estado1
             // 
-            this.estado1.Location = new System.Drawing.Point(105, 169);
+            this.estado1.Location = new System.Drawing.Point(104, 169);
             this.estado1.Name = "estado1";
             this.estado1.Size = new System.Drawing.Size(253, 20);
             this.estado1.TabIndex = 6;
@@ -139,7 +140,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(105, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(104, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(253, 142);
             this.pictureBox1.TabIndex = 3;
@@ -168,11 +169,23 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(361, 406);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
+            // btnAdquirir
+            // 
+            this.btnAdquirir.Location = new System.Drawing.Point(867, 383);
+            this.btnAdquirir.Name = "btnAdquirir";
+            this.btnAdquirir.Size = new System.Drawing.Size(163, 70);
+            this.btnAdquirir.TabIndex = 8;
+            this.btnAdquirir.Text = "Adquirir";
+            this.btnAdquirir.UseVisualStyleBackColor = true;
+            this.btnAdquirir.Click += new System.EventHandler(this.btnAdquirir_Click);
+            // 
             // FormDonaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 531);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(1079, 531);
+            this.Controls.Add(this.btnAdquirir);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.comboArticulos);
             this.Controls.Add(this.listViewComida);
@@ -202,5 +215,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btnAdquirir;
     }
 }

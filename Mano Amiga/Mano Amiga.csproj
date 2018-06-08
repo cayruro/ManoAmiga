@@ -59,6 +59,7 @@
     <Compile Include="Articulo.cs">
       <DependentUpon>ManoEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="ArticuloClase.cs" />
     <Compile Include="Categoria.cs">
       <DependentUpon>ManoEntity.tt</DependentUpon>
     </Compile>

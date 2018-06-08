@@ -16,6 +16,7 @@ namespace Mano_Amiga
     {
         private Mano_AmigaEntities1 db;
         private int identificador;
+        
 
         List<Articulo> listaArticulo = new List<Articulo>();
 
@@ -84,8 +85,9 @@ namespace Mano_Amiga
         {
             estado1.Text = a.Estado;
             txtDesc.Text = a.Descripcion ;
-           
-            //pictureBox1.Image = Image.FromFile(System.IO.Path.Combine(Application.StartupPath,a.Foto ));
+
+            pictureBox1.Image = Image.FromFile(System.IO.Path.Combine(Application.StartupPath,a.Foto ));
+            //pictureBox1.Image = Image.FromFile("E:\\"+a.Foto );
         }
         private void btnHacerDonacion_Click(object sender, EventArgs e)
         {
@@ -121,8 +123,44 @@ namespace Mano_Amiga
         private void btnReservar_Click(object sender, EventArgs e)
         {
             db = new Mano_AmigaEntities1();
-            db.sp_ReservarArticulo(extado1.Text);
+            Articulo a = listaArticulo[listViewComida.SelectedIndices[0]];
 
+            if (a.Estado.Equals("D"))
+            {
+                db.sp_ReservarArticulo(a.id_Articulo);
+                MessageBox.Show("Articulo reservado correctamente");
+                listViewComida.Clear();
+                LoadArticulo();
+            }
+            else if (a.Estado.Equals("R"))
+            {
+                MessageBox.Show("Articulo ya fue  reservado");
+            }
+            else if (a.Estado.Equals("A"))
+            {
+                MessageBox.Show("articulo ya fue adquirido");
+            }
+
+
+        }
+
+        private void btnAdquirir_Click(object sender, EventArgs e)
+        {
+            db = new Mano_AmigaEntities1();
+            Articulo a = listaArticulo[listViewComida.SelectedIndices[0]];
+
+            if (a.Estado.Equals("D"))
+            {
+                MessageBox.Show("Primero debes reservar el articulo");
+            }
+            else if (a.Estado.Equals("R"))
+            {
+                MessageBox.Show("articulo adquirido");
+                db.sp_AdquirirArticulo(a.id_Articulo, a.id_Donante);
+                listViewComida.Clear();
+                LoadArticulo();
+
+            }
         }
     }
 }

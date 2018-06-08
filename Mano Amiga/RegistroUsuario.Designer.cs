@@ -187,7 +187,7 @@
             // 
             // btnRegistrarUsuario
             // 
-            this.btnRegistrarUsuario.Location = new System.Drawing.Point(147, 365);
+            this.btnRegistrarUsuario.Location = new System.Drawing.Point(165, 365);
             this.btnRegistrarUsuario.Name = "btnRegistrarUsuario";
             this.btnRegistrarUsuario.Size = new System.Drawing.Size(143, 73);
             this.btnRegistrarUsuario.TabIndex = 17;
@@ -199,6 +199,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(453, 450);
             this.Controls.Add(this.btnRegistrarUsuario);
             this.Controls.Add(this.label9);

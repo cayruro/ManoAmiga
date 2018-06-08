@@ -110,5 +110,27 @@ namespace Mano_Amiga
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_login", userParameter, passwordParameter, salida, id_Usuario);
         }
+    
+        public virtual int sp_ReservarArticulo(Nullable<int> id_Articulo)
+        {
+            var id_ArticuloParameter = id_Articulo.HasValue ?
+                new ObjectParameter("id_Articulo", id_Articulo) :
+                new ObjectParameter("id_Articulo", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ReservarArticulo", id_ArticuloParameter);
+        }
+    
+        public virtual int sp_AdquirirArticulo(Nullable<int> id_Articulo, Nullable<int> id_Donatario)
+        {
+            var id_ArticuloParameter = id_Articulo.HasValue ?
+                new ObjectParameter("id_Articulo", id_Articulo) :
+                new ObjectParameter("id_Articulo", typeof(int));
+    
+            var id_DonatarioParameter = id_Donatario.HasValue ?
+                new ObjectParameter("id_Donatario", id_Donatario) :
+                new ObjectParameter("id_Donatario", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_AdquirirArticulo", id_ArticuloParameter, id_DonatarioParameter);
+        }
     }
 }
